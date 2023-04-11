@@ -42,9 +42,12 @@ function run() {
         {rotX: 10, rotY: -3, rotZ: -2},
       ],
       update: function() {
-          models[0].setAttribute('position', {x: position1.posX, y: position1.posY, z: position1.posZ});
+          //models[0].setAttribute('position', {x: position1.posX, y: position1.posY, z: position1.posZ});
+          let offsetPosition = 0; 
           for (const element of models) {
             element.setAttribute('rotation', {x: position1.rotX, y: position1.rotY, z: position1.rotZ});
+            element.setAttribute('position', {x: position1.posX, y: position1.posY, z: (position1.posZ + offsetPosition)});
+            offsetPosition = offsetPosition - 2;
           }
       }
     });
