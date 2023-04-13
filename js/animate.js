@@ -17,9 +17,9 @@ function run() {
     'posY': 0.2,
     'posZ': -1.5,
 
-    'rotX': 0,
-    'rotY': 0,
-    'rotZ': 0,
+    'rotX': 90,
+    'rotY': 180,
+    'rotZ': 90,
   }
 
     anime({ // eslint-disable-line

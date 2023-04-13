@@ -19,10 +19,10 @@
       <!-- a-frame scene -->
       <a-scene renderer="" embedded="" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" gltf-model="dracoDecoderPath: decoder/" cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .clickable" httpsmessage="enabled: false" fog="type: linear; far: 3; color: #000;" light="defaultLightsEnabled: false" id="scene" inspector="" keyboard-shortcuts="" screenshot="">
         <!-- sky -->
-        <a-sky color="#000" material="" geometry="" scale=""></a-sky>
+        <a-sky color="#FF0000" material="" geometry="" scale=""></a-sky>
 
         <!-- lights -->
-        <a-entity light="type: point; intensity: 5; distance: 100; decay: 1" position="0 0 20"></a-entity>
+        <a-entity light="type: ambient; intensity: 15; distance: 100; decay: 1" position="0 0 20"></a-entity>
 
         <!-- assets -->
         <a-assets>
@@ -51,22 +51,23 @@
 		<a-cylinder position="0 0 -2" rotation="65 45 0" radius="1" height="1" theta-start="57" theta-length="286" side="double" color="#FFC65D" material="" geometry=""></a-cylinder>-->
         <!-- /// -->
 
-        <!-- mutants -->
-        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -3.2" class="clickable" cursor-listener="" link="href: https://mutant.ochre.store"></a-entity>
-        <a-entity rotation="90 0 0" gltf-model="url(assets/models/mutants_TEXTURE02.glb)" scale="3 3 3" position="0 0 -3.2" class="model"></a-entity>
+        <!-- Work -->
+        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -1.5" scale="3 3 3" class="clickable" cursor-listener="" link="href: https://mutant.ochre.store"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/work_110423.glb)" scale="3 3 3" class="model"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/abstract_object02.glb)" class="abstract" position="0 0 -1.5"></a-entity>
+        <!-- /// -->
+
+        <!-- Features -->
+        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -4.5" scale="3 3 3" class="clickable" link="href: https://www.bandsintown.com/a/96639-arca?came_from=257&amp;utm_medium=web&amp;utm_source=home&amp;utm_campaign=search_bar"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/FEATURES_110423.glb)" scale="3 3 3" position="0 0 -4.5" class="model"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/ponte03.glb)" class="abstract" position="0 0 -4.5"></a-entity>
         <!-- /// -->
 
 
-
-        <!-- live shows -->
-        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -5.2" class="clickable" link="href: https://www.bandsintown.com/a/96639-arca?came_from=257&amp;utm_medium=web&amp;utm_source=home&amp;utm_campaign=search_bar"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/live_shows_draco.glb)" position="0 0 -5.2" class="model"></a-entity>
-        <!-- /// -->
-
-
-        <!-- instagram -->
-        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -7.2" class="clickable" link="href: https://www.instagram.com/arca1000000/"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/instagram_draco.glb)" position="0 0 -7.2" class="model"></a-entity>
+        <!-- About -->
+        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -7.5" scale="3 3 3" class="clickable" link="href: https://www.instagram.com/arca1000000/"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/about_110423.glb)" position="0 0 -7.5" scale="3 3 3" class="model"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/ponte03.glb)" class="abstract" position="0 0 -7.5"></a-entity>
         <!-- /// -->
 
         <!-- discord -->
@@ -94,4 +95,5 @@ let dragStart = function (event, bob) {
 </script>
     <script src="js/models.js"></script>
     <script src="js/animate.js"></script>
+    <script src="js/animate-abstract.js"></script>
 </body></html>
