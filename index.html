@@ -17,28 +17,34 @@
     <div id="aframe-bg" style="min-height: 2000px; height: 9170.96px;">
 
       <!-- a-frame scene -->
-      <a-scene renderer="" embedded="" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" gltf-model="dracoDecoderPath: decoder/" cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .clickable" httpsmessage="enabled: false" fog="type: linear; far: 3; color: #000;" light="defaultLightsEnabled: false" id="scene" inspector="" keyboard-shortcuts="" screenshot="">
-        <!-- sky -->
-        <a-sky color="#FF0000" material="" geometry="" scale=""></a-sky>
+      <a-scene renderer="" embedded="" vr-mode-ui="enabled: false" device-orientation-permission-ui="enabled: false" gltf-model="dracoDecoderPath: decoder/" cursor="rayOrigin: mouse; fuse: false;" raycaster="objects: .clickable" httpsmessage="enabled: false"  light="defaultLightsEnabled: false" id="scene" inspector="" keyboard-shortcuts="" screenshot="">
 
-        <!-- lights -->
-        <a-entity light="type: ambient; intensity: 15; distance: 100; decay: 1" position="0 0 20"></a-entity>
-
-        <!-- assets -->
         <a-assets>
-          <a-cubemap id="sky">
-            <!--
+          <img id="background" src="assets/cubemap/background.png">
+          <!--
+          <a-cubemap id="sky">            
+            
             <img src="assets/cubemap/posx.jpg">
             <img src="assets/cubemap/negx.jpg">
             <img src="assets/cubemap/posy.jpg">
             <img src="assets/cubemap/negy.jpg">
             <img src="assets/cubemap/posz.jpg">
             <img src="assets/cubemap/negz.jpg">
-            -->
+            
           </a-cubemap>
+          -->
         </a-assets>
+        <!-- sky -->
+        <a-sky src="#background" color="#FF0000" material="" geometry="" scale=""></a-sky>
+
+        <!-- lights -->
+        <a-entity light="type: ambient; intensity: 5; distance: 100; decay: 1" position="0 0 20"></a-entity>
+
+        <!-- assets -->
+        
         <!-- camera -->
-        <a-entity camera="" dynamic-height="" scroll="" scroll-world="" ref="{cam}" id="camera" wasd-controls="acceleration:100" position="0 0 0"></a-entity>
+        <!--wasd-controls="acceleration:100"-->
+        <a-entity camera="" dynamic-height="" scroll="" scroll-world="" ref="{cam}" id="camera" position="0 0 0"></a-entity>
         <!-- /// -->
 
         <!-- logo -->
@@ -52,32 +58,32 @@
         <!-- /// -->
 
         <!-- Work -->
-        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -1.5" scale="3 3 3" class="clickable" cursor-listener="" link="href: https://mutant.ochre.store"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/work_110423.glb)" scale="3 3 3" class="model"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/abstract_object02.glb)" class="abstract" position="0 0 -1.5"></a-entity>
+        <a-entity geometry="primitive: box; width: 2; height: 2; depth: .3"   class="clickable" position="0 0 -2.5" cursor-listener="" link="href: https://mutant.ochre.store"></a-entity>
+        <a-entity position="-2.5 -0.5 -2.5" rotation="0 0 0" gltf-model="url(assets/models/work.glb)"  class="model"></a-entity>
+        <!--<a-entity rotation="0 0 0" gltf-model="url(assets/models/abstract_object02.glb)" class="abstract" position="0 0 -1.5"></a-entity>-->
         <!-- /// -->
 
         <!-- Features -->
-        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -4.5" scale="3 3 3" class="clickable" link="href: https://www.bandsintown.com/a/96639-arca?came_from=257&amp;utm_medium=web&amp;utm_source=home&amp;utm_campaign=search_bar"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/FEATURES_110423.glb)" scale="3 3 3" position="0 0 -4.5" class="model"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/ponte03.glb)" class="abstract" position="0 0 -4.5"></a-entity>
+        <a-entity geometry="primitive: box; width: 2; height: 2; depth: .3"  position="0 0 -4.5"  class="clickable" link="href: https://www.bandsintown.com/a/96639-arca?came_from=257&amp;utm_medium=web&amp;utm_source=home&amp;utm_campaign=search_bar"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/features.glb)"  position="-1.75 -0.5 -4.5" scale="0.55 0.55 0.55" class="model"></a-entity>
+        <!--<a-entity rotation="0 0 0" gltf-model="url(assets/models/ponte03.glb)" class="abstract" position="0 0 -4.5"></a-entity>-->
         <!-- /// -->
 
 
         <!-- About -->
-        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -7.5" scale="3 3 3" class="clickable" link="href: https://www.instagram.com/arca1000000/"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/about_110423.glb)" position="0 0 -7.5" scale="3 3 3" class="model"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/ponte03.glb)" class="abstract" position="0 0 -7.5"></a-entity>
+        <a-entity geometry="primitive: box; width: 2; height: 2; depth: .3"  position="0 0 -7.5"  class="clickable" link="href: https://www.instagram.com/arca1000000/"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/about_v2.glb)" position="-2.5 0 -7.5"  class="model"></a-entity>
+        <!--<a-entity rotation="0 0 0" gltf-model="url(assets/models/ponte03.glb)" class="abstract" position="0 0 -7.5"></a-entity>-->
         <!-- /// -->
 
-        <!-- discord -->
-        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -9.2" class="clickable" link="href: https://discord.gg/pWESyj23eM"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/discord_draco.glb)" position="0 0 -9.2" class="model"></a-entity>
+        <!-- d d -->
+        <a-entity geometry="primitive: box; width: 2; height: 2; depth: .3" position="0 0 -9.5" class="clickable" link="href: https://discord.gg/pWESyj23eM"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/d_d.glb)" position="-2.5 0 -9.5" class="model"></a-entity>
         <!-- /// -->
 
-        <!-- mailing list -->
-        <a-entity geometry="primitive: box; width: .8; height: .8; depth: .3" material="opacity: 0.0; transparent: true" position="0 0 -11.2" class="clickable" link="href: https://formkeep.com/p/aaf2a270cfe92c29afa378534b84c519"></a-entity>
-        <a-entity rotation="0 0 0" gltf-model="url(assets/models/mailing_list_draco.glb)" position="0 0 -11.2" class="model" id="last"></a-entity>
+        <!-- contact -->
+        <a-entity geometry="primitive: box; width: 2; height: 2; depth: .3"  position="0 0 -11.5" class="clickable" link="href: https://formkeep.com/p/aaf2a270cfe92c29afa378534b84c519"></a-entity>
+        <a-entity rotation="0 0 0" gltf-model="url(assets/models/contacts.glb)" scale="0.55 0.55 0.55" position="-1.5 -0.5 -11.5" class="model" id="last"></a-entity>
         <!-- /// -->
 
       <canvas class="a-canvas" data-aframe-canvas="true" data-engine="three.js r137" width="1206" height="942"></canvas><div class="a-loader-title" style="display: none;"></div></a-scene>
