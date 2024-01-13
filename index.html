@@ -21,21 +21,15 @@
 
         <a-assets>
           <img id="background" src="assets/cubemap/background.png">
-          
-          <a-cubemap id="sky">            
-            <!--
-            <img src="assets/cubemap/posx.jpg">
-            <img src="assets/cubemap/negx.jpg">
-            <img src="assets/cubemap/posy.jpg">
-            <img src="assets/cubemap/negy.jpg">
-            <img src="assets/cubemap/posz.jpg">
-            <img src="assets/cubemap/negz.jpg">
-            -->
-          </a-cubemap>
+          <video muted crossorigin="anonymous" webkit-playsinline  id="bg-video" autoplay loop="true" src="assets/video/bg-video.mp4"></video>
+          <video muted crossorigin="anonymous" webkit-playsinline  id="video" preload="auto" src="https://bitmovin-a.akamaihd.net/content/playhouse-vr/progressive.mp4" autoplay loop="true" crossorigin="anonymous" playsinline></video>
           
         </a-assets>
         <!-- sky -->
-        <a-sky src="#background" color="#FF0000" material="" geometry="" scale=""></a-sky>
+        
+
+        <a-videosphere src="#video" >
+        </a-videosphere>
 
         <!-- lights -->
         <a-entity light="type: ambient; intensity: 3; distance: 100; decay: 1" position="0 0 20"></a-entity>

@@ -10,7 +10,8 @@ function run() {
   const modelNodeList = document.getElementsByClassName('model');
   const models =  Array.prototype.slice.call(modelNodeList);
 
-
+  // to play the videosphere
+document.querySelector("#video").play();
 
   let position1 = {
     'posX': -2.25,
