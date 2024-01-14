@@ -75,7 +75,7 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
       getCoordinates();
       // camera props
       let mover = -window.scrollY;
-      let speed = 0.002;
+      let speed = 0.005;
       moveCamera(mover, speed)
       stopGo(event.deltaY, finalHeight);
   
