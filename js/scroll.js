@@ -46,7 +46,7 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
       let movement = r * s;
       
       if (camera.object3D.position.z < -10.8) {
-        camera.object3D.position.z = -3.8;
+        document.documentElement.classList.add("halt");
       }
       else {
         camera.object3D.position.set(0, 0, movement);
