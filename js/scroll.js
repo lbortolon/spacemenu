@@ -28,7 +28,7 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
   
       // stop or move cam via overflow
     let stopGo = (deltaY, height) => {
-  
+      console.log(cameraPositionZ);
       if (deltaY < 0 ) {
       //  console.log("go")
         document.documentElement.classList.remove("halt");
