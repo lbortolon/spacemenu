@@ -48,25 +48,9 @@
         
         <!-- camera -->
         <!--wasd-controls="acceleration:100"-->
-        <script>
-          AFRAME.registerComponent('limit-my-distance', {
-            init: function() {
-                // nothing here
-            },
-            tick: function() {
-              // limit Z
-              if (this.el.object3D.position.z > 3.8) {
-                this.el.object3D.position.z = 3.8;
-              }
-              if (this.el.object3D.position.z < -10) {
-                this.el.object3D.position.z = -3.8;
-              }
+        
       
-            }
-          });
-      </script>
-      
-        <a-entity limit-my-distance camera="" dynamic-height="" scroll="" scroll-world="" ref="{cam}" id="camera" position="0 0 0"></a-entity>
+        <a-entity  camera="" dynamic-height="" scroll="" scroll-world="" ref="{cam}" id="camera" position="0 0 0"></a-entity>
         <!-- /// -->
 
         <!-- logo -->
