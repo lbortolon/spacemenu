@@ -82,7 +82,8 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
       // camera props
       let mover = -window.scrollY;
       let speed = 0.005;
-      moveCamera(mover, speed)
+      moveCamera(mover, speed);
+      console.log(finalHeight);
       stopGo(event.deltaY, finalHeight);
   
       //console.log( "This is the wheel event ---> " + finalHeight);
