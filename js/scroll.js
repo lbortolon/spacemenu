@@ -44,8 +44,13 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
       let r = mover;
       let s = speed;
       let movement = r * s;
-  
-      camera.object3D.position.set(0, 0, movement);
+      
+      if (camera.object3D.position.z < -10.8) {
+        camera.object3D.position.z = -3.8;
+      }
+      else {
+        camera.object3D.position.set(0, 0, movement);
+      }
       }
   
     let getCoordinates = function getCoordinates() {
