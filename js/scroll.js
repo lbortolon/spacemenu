@@ -45,13 +45,9 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
       let s = speed;
       let movement = r * s;
       
-      if (camera.object3D.position.z < -10.8) {
-        document.documentElement.classList.add("halt");
-      }
-      else {
-        camera.object3D.position.set(0, 0, movement);
-        document.documentElement.classList.remove("halt");
-      }
+      
+      camera.object3D.position.set(0, 0, movement);
+        
       }
   
     let getCoordinates = function getCoordinates() {
@@ -83,6 +79,7 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
       let mover = -window.scrollY;
       let speed = 0.005;
       moveCamera(mover, speed);
+      console.log(event.deltaY);
       console.log(finalHeight);
       stopGo(event.deltaY, finalHeight);
   
