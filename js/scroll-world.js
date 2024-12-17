@@ -156,6 +156,8 @@ AFRAME.registerComponent('scroll-world', {
   },
 
   init: function limit() {
+
+    console.log(this.el.object3D.position.z);
     // limit Z
     if (this.el.object3D.position.z > 3.8) {
       this.el.object3D.position.z = 3.8;
