@@ -50,6 +50,7 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
       }
       else {
         camera.object3D.position.set(0, 0, movement);
+        document.documentElement.classList.remove("halt");
       }
       }
   
