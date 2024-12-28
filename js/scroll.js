@@ -12,8 +12,8 @@ AFRAME.registerComponent('scroll', { //eslint-disable-line
       let screenHeight = window.visualViewport.height
       let fov = AFRAME.scenes[0].camera.fov; // standard is 80
       let vFOV = fov * (Math.PI / 180); // convert to radians
-      //let cameraPositionZ = window.innerHeight / (2 * Math.tan(vFOV / 2) ); // thank gawd for this hack
-      let cameraPositionZ = 7000; // hu
+      let cameraPositionZ = window.innerHeight / (2 * Math.tan(vFOV / 2) ); // thank gawd for this hack
+      // let cameraPositionZ = 7000; // hu
   
   
       // 2d to 3d vector transform for scroll pixles
